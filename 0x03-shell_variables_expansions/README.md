@@ -174,3 +174,31 @@ COLUMNS=133
 - The first line is the shebang `#!/bin/bash`.
 - The second line lists all local variables, environment variables, and functions using `set`.
 - Works correctly when sourced.
+
+
+# 6-create_local_variable
+
+This script creates a local shell variable named BEST with the value "School".
+
+## Description
+
+- The variable is local to the current shell session when sourced.
+- Assigning a value to BEST does not export it to child processes.
+
+## Usage
+
+1. Make the script executable:
+chmod +x 6-create_local_variable
+
+2. Source the script in the shell:
+. ./6-create_local_variable
+
+3. Example:
+echo $BEST
+School
+
+## Notes
+
+- The script is exactly two lines long.
+- The first line is the shebang `#!/bin/bash`.
+- The second line assigns the value "School" to the local variable BEST.
