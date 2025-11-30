@@ -31,7 +31,7 @@ This script prints "hello" followed by the current Linux username.
 
 ## Description
 
-It uses the `$USER` environment variable to retrieve the name of the user currently logged in and prints a greeting.
+It uses the `whoami` command to retrieve the current logged-in user and prints a greeting.
 
 ## Usage
 
@@ -48,4 +48,4 @@ hello julien
 
 - The script is exactly two lines long.
 - The first line is the shebang `#!/bin/bash`.
-- The second line prints the greeting using the `$USER` variable.
+- The second line prints the greeting using `whoami`.
