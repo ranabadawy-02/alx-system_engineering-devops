@@ -143,3 +143,35 @@ declare -x PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 - The first line is the shebang `#!/bin/bash`.
 - The second line lists exported global variables using `export -p`.
 - Works correctly when sourced.
+
+
+# 5-local_variables
+
+This script prints all local variables, environment variables, and functions in the current shell.
+
+## Description
+
+It uses the `declare -p` command to list all variables (local and environment) and functions defined in the shell.  
+This includes shell variables like `BASH`, `COLUMNS`, and any user-defined variables or functions.
+
+## Usage
+
+1. Make the script executable:
+chmod +x 5-local_variables
+
+2. Source the script:
+. ./5-local_variables
+
+3. Example output:
+BASH=/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extglob:extquote:force_fignore:histappend:interactive_comments:progcomp:promptvars:sourcepath
+BASH_VERSION='4.3.46(1)-release'
+COLUMNS=133
+...
+
+## Notes
+
+- The script is exactly two lines long.
+- The first line is the shebang `#!/bin/bash`.
+- The second line prints all variables and functions using `declare -p`.
+- Works correctly when sourced.
