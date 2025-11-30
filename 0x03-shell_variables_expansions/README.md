@@ -202,3 +202,31 @@ School
 - The script is exactly two lines long.
 - The first line is the shebang `#!/bin/bash`.
 - The second line assigns the value "School" to the local variable BEST.
+
+
+# 7-create_global_variable
+
+This script creates a global shell variable named BEST with the value "School".
+
+## Description
+
+- The variable is exported, making it available to all child processes of the shell.
+- Using `export` ensures that programs run from the shell can access BEST.
+
+## Usage
+
+1. Make the script executable:
+chmod +x 7-create_global_variable
+
+2. Source the script in the shell:
+. ./7-create_global_variable
+
+3. Example:
+echo $BEST
+School
+
+## Notes
+
+- The script is exactly two lines long.
+- The first line is the shebang `#!/bin/bash`.
+- The second line creates and exports the variable BEST.
