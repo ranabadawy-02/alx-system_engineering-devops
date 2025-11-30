@@ -257,3 +257,33 @@ export TRUEKNOWLEDGE=1209
 - The script is exactly two lines long.
 - The first line is the shebang `#!/bin/bash`.
 - The second line prints the sum of 128 and $TRUEKNOWLEDGE.
+
+
+# 9-divide_and_rule
+
+This script prints the result of dividing the environment variable POWER by DIVIDE.
+
+## Description
+
+- The script uses shell arithmetic `$((...))` to perform integer division.
+- The result is printed followed by a new line.
+- Both POWER and DIVIDE must be exported in the environment.
+
+## Usage
+
+1. Make the script executable:
+chmod +x 9-divide_and_rule
+
+2. Set the environment variables and run the script:
+export POWER=42784
+export DIVIDE=32
+./9-divide_and_rule
+
+3. Example output:
+1337
+
+## Notes
+
+- The script is exactly two lines long.
+- The first line is the shebang `#!/bin/bash`.
+- The second line performs the division and prints the result.
