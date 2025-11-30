@@ -89,8 +89,7 @@ This script counts the number of directories in the PATH environment variable.
 
 ## Description
 
-It splits PATH on the colon `:` character, converts it to multiple lines, then counts all non-empty lines.  
-Empty entries (e.g., "::") are ignored.
+It splits the PATH variable on colons `:` and counts the number of entries, including empty ones.
 
 ## Usage
 
@@ -101,16 +100,11 @@ chmod +x 3-paths
 . ./3-paths
 
 3. Example output:
-11
-
-4. Example with extra empty entries:
-PATH=/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:::::/hello
-. ./3-paths
-12
+6
 
 ## Notes
 
 - The script is exactly two lines long.
 - The first line is the shebang `#!/bin/bash`.
-- The second line counts directories using `tr` and `grep -c`.
-- Must be sourced or executed in the shell to see the PATH.
+- The second line counts PATH directories using an array and outputs the total number.
+- Works correctly even if PATH contains empty entries (::).
