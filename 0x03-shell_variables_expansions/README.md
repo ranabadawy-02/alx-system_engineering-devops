@@ -316,3 +316,32 @@ export LOVE=3
 - The script is exactly two lines long.
 - The first line is the shebang `#!/bin/bash`.
 - The second line performs exponentiation and prints the result.
+
+
+# 11-binary_to_decimal
+
+This script converts a binary number stored in the environment variable BINARY to decimal (base 10).
+
+## Description
+
+- The script uses shell arithmetic `$((2#...))` to interpret the value of BINARY as a binary number.
+- The result is printed followed by a new line.
+- The BINARY variable must be exported in the environment.
+
+## Usage
+
+1. Make the script executable:
+chmod +x 11-binary_to_decimal
+
+2. Set the environment variable and run the script:
+export BINARY=10100111001
+./11-binary_to_decimal
+
+3. Example output:
+1337
+
+## Notes
+
+- The script is exactly two lines long.
+- The first line is the shebang `#!/bin/bash`.
+- The second line converts the binary number to decimal and prints the result.
