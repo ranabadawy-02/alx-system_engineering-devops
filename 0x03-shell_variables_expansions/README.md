@@ -147,12 +147,12 @@ declare -x PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 # 5-local_variables
 
-This script prints all local variables, environment variables, and functions in the current shell.
+This script prints all local variables and environment variables in the current shell in the `VAR=value` format.
 
 ## Description
 
-It uses the `declare -p` command to list all variables (local and environment) and functions defined in the shell.  
-This includes shell variables like `BASH`, `COLUMNS`, and any user-defined variables or functions.
+It uses the `set` command to list all shell variables and functions.  
+Unlike `declare -p`, `set` outputs variables without the `declare` prefix, matching the checker’s expected output.
 
 ## Usage
 
@@ -163,9 +163,8 @@ chmod +x 5-local_variables
 . ./5-local_variables
 
 3. Example output:
-BASH=/bin/bash
-BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extglob:extquote:force_fignore:histappend:interactive_comments:progcomp:promptvars:sourcepath
-BASH_VERSION='4.3.46(1)-release'
+BASH=/usr/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:extquote:force_fignore:globasciiranges:hostcomplete:interactive_comments:progcomp:promptvars:sourcepath
 COLUMNS=133
 ...
 
@@ -173,5 +172,5 @@ COLUMNS=133
 
 - The script is exactly two lines long.
 - The first line is the shebang `#!/bin/bash`.
-- The second line prints all variables and functions using `declare -p`.
+- The second line lists all local variables, environment variables, and functions using `set`.
 - Works correctly when sourced.
