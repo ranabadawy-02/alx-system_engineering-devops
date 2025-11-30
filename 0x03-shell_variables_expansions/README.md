@@ -287,3 +287,32 @@ export DIVIDE=32
 - The script is exactly two lines long.
 - The first line is the shebang `#!/bin/bash`.
 - The second line performs the division and prints the result.
+
+# 10-love_exponent_breath
+
+This script displays the result of raising the environment variable BREATH to the power of LOVE.
+
+## Description
+
+- The script uses shell arithmetic `$((...))` with the `**` operator for exponentiation.
+- The result is printed followed by a new line.
+- Both BREATH and LOVE must be exported in the environment.
+
+## Usage
+
+1. Make the script executable:
+chmod +x 10-love_exponent_breath
+
+2. Set the environment variables and run the script:
+export BREATH=4
+export LOVE=3
+./10-love_exponent_breath
+
+3. Example output:
+64
+
+## Notes
+
+- The script is exactly two lines long.
+- The first line is the shebang `#!/bin/bash`.
+- The second line performs exponentiation and prints the result.
