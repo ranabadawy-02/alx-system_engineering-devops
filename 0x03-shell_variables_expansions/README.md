@@ -23,3 +23,29 @@ The original `ls` command can still be accessed by using `\ls`.
 - The first line is the shebang `#!/bin/bash`.
 - The second line defines the alias.
 - Always use caution when running this alias, as `rm *` deletes files.
+
+
+# 1-hello_you
+
+This script prints "hello" followed by the current Linux username.
+
+## Description
+
+It uses the `$USER` environment variable to retrieve the name of the user currently logged in and prints a greeting.
+
+## Usage
+
+1. Make the script executable:
+chmod +x 1-hello_you
+
+2. Run the script:
+./1-hello_you
+
+Example output:
+hello julien
+
+## Notes
+
+- The script is exactly two lines long.
+- The first line is the shebang `#!/bin/bash`.
+- The second line prints the greeting using the `$USER` variable.
