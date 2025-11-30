@@ -114,3 +114,36 @@ PATH=/bin::::/home:/usr:::::/home/me
 - The first line is the shebang `#!/bin/bash`.
 - The second line counts PATH directories using `tr` and `grep -c`.
 - Works correctly even if PATH contains empty entries (::).
+
+
+# 4-global_variables
+
+This script prints all global environment variables available in the current shell.
+
+## Description
+
+It uses the `printenv` command to list all environment variables, including system and user-defined ones.
+
+## Usage
+
+1. Make the script executable:
+chmod +x 4-global_variables
+
+2. Source or run the script:
+. ./4-global_variables
+
+3. Example output:
+CC=gcc
+CDPATH=.:~:/usr/local:/usr:/
+CFLAGS=-O2 -fomit-frame-pointer
+COLORTERM=gnome-terminal
+DISPLAY=:0
+HOME=/nethome/franky
+...
+
+## Notes
+
+- The script is exactly two lines long.
+- The first line is the shebang `#!/bin/bash`.
+- The second line lists all environment variables using `printenv`.
+- Works correctly when sourced or executed in the current shell.
