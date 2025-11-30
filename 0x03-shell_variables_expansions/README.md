@@ -118,32 +118,28 @@ PATH=/bin::::/home:/usr:::::/home/me
 
 # 4-global_variables
 
-This script prints all global environment variables available in the current shell.
+This script prints all exported global variables in the current shell.
 
 ## Description
 
-It uses the `printenv` command to list all environment variables, including system and user-defined ones.
+It uses `export -p` to list all global variables defined in the shell.  
+This includes project-specific variables like `HBTN=89`.
 
 ## Usage
 
 1. Make the script executable:
 chmod +x 4-global_variables
 
-2. Source or run the script:
+2. Source the script:
 . ./4-global_variables
 
 3. Example output:
-CC=gcc
-CDPATH=.:~:/usr/local:/usr:/
-CFLAGS=-O2 -fomit-frame-pointer
-COLORTERM=gnome-terminal
-DISPLAY=:0
-HOME=/nethome/franky
-...
+declare -x HBTN="89"
+declare -x PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 ## Notes
 
 - The script is exactly two lines long.
 - The first line is the shebang `#!/bin/bash`.
-- The second line lists all environment variables using `printenv`.
-- Works correctly when sourced or executed in the current shell.
+- The second line lists exported global variables using `export -p`.
+- Works correctly when sourced.
