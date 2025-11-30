@@ -345,3 +345,37 @@ export BINARY=10100111001
 - The script is exactly two lines long.
 - The first line is the shebang `#!/bin/bash`.
 - The second line converts the binary number to decimal and prints the result.
+
+
+# 12-combinations
+
+This script prints all possible combinations of two lowercase letters from a to z, excluding "oo".
+
+## Description
+
+•⁠  ⁠The script loops over letters ⁠ a ⁠ to ⁠ z ⁠ twice using nested loops.
+•⁠  ⁠Each combination is printed on a separate line.
+•⁠  ⁠The combination "oo" is excluded.
+•⁠  ⁠Output is alphabetically ordered starting from "aa".
+•⁠  ⁠The script contains fewer than 64 characters in total.
+
+## Usage
+
+1.⁠ ⁠Make the script executable:
+chmod +x 12-combinations
+
+2.⁠ ⁠Run the script:
+./12-combinations
+
+3.⁠ ⁠Example output:
+aa
+ab
+ac
+...
+on
+op
+oq
+...
+zz
+
+•⁠  ⁠Total lines: 26*26 - 1 = 675
