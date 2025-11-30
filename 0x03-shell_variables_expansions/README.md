@@ -230,3 +230,30 @@ School
 - The script is exactly two lines long.
 - The first line is the shebang `#!/bin/bash`.
 - The second line creates and exports the variable BEST.
+
+# 8-true_knowledge
+
+This script prints the result of adding 128 to the value stored in the environment variable TRUEKNOWLEDGE.
+
+## Description
+
+- The script uses shell arithmetic `$((...))` to calculate the sum.
+- The result is printed followed by a new line.
+
+## Usage
+
+1. Make the script executable:
+chmod +x 8-true_knowledge
+
+2. Set the environment variable and run the script:
+export TRUEKNOWLEDGE=1209
+./8-true_knowledge
+
+3. Example output:
+1337
+
+## Notes
+
+- The script is exactly two lines long.
+- The first line is the shebang `#!/bin/bash`.
+- The second line prints the sum of 128 and $TRUEKNOWLEDGE.
