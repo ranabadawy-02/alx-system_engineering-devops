@@ -89,7 +89,7 @@ This script counts the number of directories in the PATH environment variable.
 
 ## Description
 
-It splits the PATH variable on colons `:` and counts the number of entries, including empty ones.
+It converts PATH into multiple lines by replacing colons `:` with newlines and counts the total number of lines, including empty entries.
 
 ## Usage
 
@@ -102,9 +102,14 @@ chmod +x 3-paths
 3. Example output:
 6
 
+Example with empty entries:
+PATH=/bin::::/home:/usr:::::/home/me
+. ./3-paths
+6
+
 ## Notes
 
 - The script is exactly two lines long.
 - The first line is the shebang `#!/bin/bash`.
-- The second line counts PATH directories using an array and outputs the total number.
+- The second line counts PATH entries using `tr` and `wc -l`.
 - Works correctly even if PATH contains empty entries (::).
